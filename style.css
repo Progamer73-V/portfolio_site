@@ -1,0 +1,46 @@
+:root {
+    --primary-bg: #e3e3e3;
+    --primary-text: black;
+    --secondary-bg: green;
+    --secondary-text: white;
+    --secondary-font: Georgia, 'Times New Roman', Times, serif;
+    --standard-gap: 40px;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+}
+
+#about h2 {
+    background: var(--secondary-bg);
+    font-family: var(--secondary-font);
+}
+#about p {
+    background: var(--secondary-bg);
+    color: var(--secondary-text);
+    margin: 10px;
+}
+
+#projects h2 {
+    background: var(--secondary-bg);
+    font-family: var(--secondary-font);
+}
+#projects article {
+    background: var(--secondary-bg);
+    color: var(--secondary-text);
+    margin: 40px;
+}
+
+nav {
+    background: yellow;
+}
+
+.wayfinder {
+    background: lightgreen;
+}
+
+.callme {
+    background: lightgreen;
+}
