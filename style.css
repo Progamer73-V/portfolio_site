@@ -1,5 +1,5 @@
 :root {
-    --primary-bg: #e3e3e3;
+    --primary-bg: #lightgreen;
     --primary-text: black;
     --secondary-bg: green;
     --secondary-text: white;
@@ -13,28 +13,88 @@ body {
     color: var(--primary-text);
 }
 
+#greetings h1{
+    background: var(--secondary-bg);
+    gap: 10px;
+}
+
 #about h2 {
     background: var(--secondary-bg);
     font-family: var(--secondary-font);
 }
 #about p {
-    background: var(--secondary-bg);
-    color: var(--secondary-text);
+    background: var(--primary-bg);
+    color: var(--primary-text);
     margin: 10px;
 }
 
-#projects h2 {
-    background: var(--secondary-bg);
-    font-family: var(--secondary-font);
+#projects .articles {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
+
+@media (min-width: 400px){
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, minmax(100px, auto));
+        gap: 1em
+    }
+
+    #projects h2 {
+        grid-column: span 1 / span 1;
+        background: var(--secondary-bg);
+        font-family: var(--secondary-font);
+    }
+}
+
+@media (min-width: 700px){
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(100px, auto));
+        gap: 1em
+    }
+
+    #projects h2 {
+        grid-column: span 2 / span 2;
+        background: var(--secondary-bg);
+        font-family: var(--secondary-font);
+    }
+}
+
+@media (min-width: 1000px){
+    #projects {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1em
+    }
+
+    #projects h2 {
+        grid-column: span 3 / span 3;
+        background: var(--secondary-bg);
+        font-family: var(--secondary-font);
+    }
+}
+
 #projects article {
-    background: var(--secondary-bg);
-    color: var(--secondary-text);
+    background: var(--primary-bg);
+    color: var(--primary-text);
     margin: 40px;
 }
 
 nav {
-    background: yellow;
+    border-radius: 30px;
+}
+
+/*This is where the AI code went, I used Copilot*/
+/*create a section for a CSS file. the section itself is part of nav, with three links in a ul list. I want a grid.*/
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 2rem;
 }
 
 .wayfinder {
@@ -42,5 +102,13 @@ nav {
 }
 
 .callme {
+    background: lightgreen;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: .5fr;
+    gap: 40px;
     background: lightgreen;
 }
