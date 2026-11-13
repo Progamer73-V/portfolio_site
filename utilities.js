@@ -1,4 +1,6 @@
-ScrollReveal().reveal('site');
+window.onload = function() {
+    ScrollReveal().reveal('site');
+}
 
 const themeToggleBtn = document.getElementById('theme-toggle');
 const htmlElement = document.documentElement;
