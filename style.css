@@ -1,10 +1,20 @@
 :root {
-    --primary-bg: #lightgreen;
+    --primary-bg: white;
     --primary-text: black;
     --secondary-bg: green;
     --secondary-text: white;
+    --card-bg: lightgreen;
     --secondary-font: Georgia, 'Times New Roman', Times, serif;
     --standard-gap: 40px;
+}
+
+[data-theme="dark"] {
+    --primary-bg: #121212;
+    --primary-text: #e0e0e0;
+    --secondary-bg: #1e1e1e;
+    --card-bg: grey;
+    --button-bg: #333333;
+    --button-text: #ffffff;
 }
 
 body {
@@ -98,11 +108,11 @@ nav ul {
 }
 
 .wayfinder {
-    background: lightgreen;
+    background: var(--card-bg);
 }
 
 .callme {
-    background: lightgreen;
+    background: var(--card-bg);
 }
 
 main {
@@ -110,5 +120,5 @@ main {
     grid-template-columns: repeat(1, 1fr);
     grid-auto-rows: .5fr;
     gap: 40px;
-    background: lightgreen;
+    background: var(--card-bg);
 }
